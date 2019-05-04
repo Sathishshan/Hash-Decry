@@ -1,13 +1,27 @@
 #!/bin/bash
 
-#colour
+# colour
 g="\033[32m"
 r="\033[31m"
 b="\033[34m"
 lrbg="\033[101m"
+cr="\033[36m"
 n="\033[0m"
 
-Algorithms
+# banner
+echo -e "${cr}"
+cat << "EOF"
+              _      _          _ _
+             (_)    | |        (_) |
+   __ _ _   _ _  ___| | __  ___ _| |_   _____ _ __
+  / _` | | | | |/ __| |/ / / __| | \ \ / / _ \ '__|
+ | (_| | |_| | | (__|   <  \__ \ | |\ V /  __/ |
+  \__, |\__,_|_|\___|_|\_\ |___/_|_| \_/ \___|_|
+     | |               ______
+     |_|              |______|
+EOF
+echo -e "${n}"
+echo "Algorithms"
 echo "MD5" "SHA1" "SHA-256" "SHA-384" "SHA-512"
 echo
 # Hash Check & Ensuring the userinput
