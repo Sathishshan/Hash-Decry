@@ -4,4 +4,4 @@ Quicksilver - lightning fast hash cracker
 
 USAGE: 
 
- ./quicksilver.sh hashvalue
+ ./quicksilver.sh hash_value
