@@ -2,5 +2,6 @@
 
 Quicksilver - lightning fast hash cracker
 
-USAGE:
+USAGE: 
+
  ./quicksilver.sh hash
