@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# colour
+# Colour
 g="\033[32m"
 r="\033[31m"
 b="\033[34m"
@@ -9,7 +9,7 @@ lrbg="\033[101m"
 bbg="\033[44m"
 n="\033[0m"
 
-# banner
+# Banner
 echo -e "${cr}"
 cat << "EOF"
               _      _          _ _
