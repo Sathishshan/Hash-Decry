@@ -21,8 +21,8 @@ cat << "EOF"
      |_|              |______|
 EOF
 echo -e "${n}"
-echo "Algorithms"
-echo "MD5" "SHA1" "SHA-256" "SHA-384" "SHA-512"
+echo "[+] Algorithms"
+echo "[+]" "MD5" "SHA1" "SHA-256" "SHA-384" "SHA-512"
 echo
 # Hash Check & Ensuring the userinput
 while [ -z $hash ]; do
