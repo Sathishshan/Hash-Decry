@@ -4,8 +4,9 @@
 g="\033[32m"
 r="\033[31m"
 b="\033[34m"
-lrbg="\033[101m"
 cr="\033[36m"
+lrbg="\033[101m"
+bbg="\033[44m"
 n="\033[0m"
 
 # banner
@@ -22,7 +23,7 @@ cat << "EOF"
 EOF
 echo -e "${n}"
 echo "[+] Algorithms"
-echo "[+]" "MD5" "SHA1" "SHA-256" "SHA-384" "SHA-512"
+echo "[+]" "MD5 |" "SHA1 |" "SHA-256 |" "SHA-384 |" "SHA-512"
 echo
 # Hash Check & Ensuring the userinput
 while [ -z $hash ]; do
@@ -78,6 +79,6 @@ elif [ "$count" -eq 128 ]; then
                 exit
         fi
 else
-        echo -e "${lrbg}Hash Value Miss Match${n}"
+        echo -e "${lrbg}Hash Value Miss Match${n} || ${bbg}Unknown Algorithm ${n}"
         exit
 fi
