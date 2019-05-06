@@ -33,9 +33,10 @@ done
 count=$(echo -n $hash | wc -m)
 
 # Working Area
+hashfor=$(curl -s "http://hashtoolkit.com/reverse-hash/?hash=${hash}" | sed -n 219p | cut -d '>' -f 4 | cut -d "<" -f 1)
+
 if [ "$count" -eq 32 ]; then
         echo -e "It's a ${b}MD5${n} hash"
-        hashfor=$(curl -s "http://hashtoolkit.com/reverse-hash/?hash=${hash}" | sed -n 219p | cut -d '>' -f 4 | cut -d "<" -f 1)
         if [ -z $hashfor ]; then
                 echo -e "${r}But, no hash crack found!${n}"
         else
@@ -44,7 +45,6 @@ if [ "$count" -eq 32 ]; then
         fi
 elif [ "$count" -eq 40 ]; then
         echo -e "It's a ${b}SHA1${n} hash"
-        hashfor=$(curl -s "http://hashtoolkit.com/reverse-hash/?hash=${hash}" | sed -n 219p | cut -d '>' -f 4 | cut -d "<" -f 1)
         if [ -z $hashfor ]; then
                 echo -e "${r}But, no hash crack found!${n}"
         else
@@ -53,7 +53,6 @@ elif [ "$count" -eq 40 ]; then
         fi
 elif [ "$count" -eq 64 ]; then
         echo -e "It's a ${b}SHA-256${n} hash"
-        hashfor=$(curl -s "http://hashtoolkit.com/reverse-hash/?hash=${hash}" | sed -n 219p | cut -d '>' -f 4 | cut -d "<" -f 1)
         if [ -z $hashfor ]; then
                 echo -e "${r}But, no hash crack found!${n}"
         else
@@ -62,7 +61,6 @@ elif [ "$count" -eq 64 ]; then
         fi
 elif [ "$count" -eq 96 ]; then
         echo -e "It's a ${b}SHA-384${n} hash"
-        hashfor=$(curl -s "http://hashtoolkit.com/reverse-hash/?hash=${hash}" | sed -n 219p | cut -d '>' -f 4 | cut -d "<" -f 1)
         if [ -z $hashfor ]; then
                 echo -e "${r}But, no hash crack found!${n}"
         else
@@ -71,7 +69,6 @@ elif [ "$count" -eq 96 ]; then
         fi
 elif [ "$count" -eq 128 ]; then
         echo -e "It's a ${b}SHA-512${n} hash"
-        hashfor=$(curl -s "http://hashtoolkit.com/reverse-hash/?hash=${hash}" | sed -n 219p | cut -d '>' -f 4 | cut -d "<" -f 1)
         if [ -z $hashfor ]; then
                 echo -e "${r}But, no hash crack found!${n}"
         else
